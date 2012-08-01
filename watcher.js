@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var hardWrap = require('./hardwrap').hardWrap;
-var parseStream = require('./parser').parseStream;
+var hardWrap = require('./lib/hardwrap').hardWrap;
+var parseStream = require('./lib/parser').parseStream;
 var request = require('request');
 var assert = require('assert');
 var log = console.log;
@@ -40,12 +40,12 @@ function processComment(p, cb)
       'VALUES ($1, $2, $3, $4)', [ p.id, p.postId, p.username,
       JSON.stringify(p) ], function(err, res) {
 
-        if (err && err.code == '23505') {
+        if (err) {
           if (err.code === '23505') {
-          // this means we already have an item by that id
-          if (VERBOSE)
-            log('already seen: comment %d on post %d from %s', p.id, p.postId,
-              p.username);
+            // this means we already have an item by that id
+            if (VERBOSE)
+              log('already seen: comment %d on post %d from %s', p.id,
+                p.postId, p.username);
             return cb();
           }
           return cb(err);
