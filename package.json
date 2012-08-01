@@ -1,0 +1,22 @@
+{
+  "name": "hackernews-tools",
+  "version": "0.0.0",
+  "dependencies": {
+    "async": "0.1.22",
+    "pg": "0.8.1",
+    "request": "2.9.203",
+    "sax": "0.4.2"
+  },
+  "author": {
+    "name": "Joshua M. Clulow",
+    "email": "josh@sysmgr.org",
+    "url": "http://blog.sysmgr.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jclulow/hackernews-tools"
+  },
+  "engines": [ "node" ],
+  "description": "Some Misc. Hackernews Tools",
+  "homepage": "https://github.com/jclulow/hackernews-tools"
+}
