@@ -1,0 +1,9 @@
+CREATE TABLE items (
+  id BIGINT,
+  post_id BIGINT NOT NULL,
+  user_id VARCHAR(200) NOT NULL,
+  json TEXT NOT NULL,
+  firstseen TIMESTAMP NOT NULL DEFAULT NOW(),
+
+  PRIMARY KEY (id)
+);
