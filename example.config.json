@@ -1,0 +1,11 @@
+{
+  "database": {
+    "database": "hackernews",
+    "user": "hackernews",
+    "password": "REDACTED",
+    "host": "localhost"
+  },
+  "users": [
+    "jclulow"
+  ]
+}
